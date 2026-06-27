@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import SmoothScroll from "@/components/SmoothScroll";
+import CustomCursor from "@/components/CustomCursor";
+import Navbar from "@/components/Navbar";
 import "./globals.css";
 
 const geistSans = localFont({
@@ -28,7 +31,11 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <SmoothScroll>
+          <CustomCursor />
+          <Navbar />
+          {children}
+        </SmoothScroll>
       </body>
     </html>
   );
