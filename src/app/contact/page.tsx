@@ -127,7 +127,7 @@ export default function ContactPage() {
                     onChange={handleChange}
                     onFocus={() => handleFocus("name")}
                     onBlur={handleBlur}
-                    className={`w-full px-5 py-4 bg-black/30 border rounded-xl text-xs md:text-sm text-white placeholder-transparent focus:outline-none transition-all duration-300 ${
+                    className={`w-full pt-6 pb-2 px-5 bg-black/30 border rounded-xl text-xs md:text-sm text-white placeholder-transparent focus:outline-none transition-all duration-300 ${
                       focusedField === "name"
                         ? "border-violet-500 shadow-[0_0_20px_rgba(139,92,246,0.15)]"
                         : "border-white/10"
@@ -135,9 +135,9 @@ export default function ContactPage() {
                   />
                   <label
                     htmlFor="name"
-                    className={`absolute left-5 top-4 text-xs md:text-sm pointer-events-none transition-all duration-300 ${
+                    className={`absolute left-5 top-4 text-xs md:text-sm pointer-events-none transition-all duration-300 origin-left ${
                       focusedField === "name" || formData.name
-                        ? "-translate-y-7 scale-90 text-violet-400"
+                        ? "-translate-y-2.5 scale-75 text-violet-400"
                         : "text-white/40"
                     }`}
                   >
@@ -156,7 +156,7 @@ export default function ContactPage() {
                     onChange={handleChange}
                     onFocus={() => handleFocus("email")}
                     onBlur={handleBlur}
-                    className={`w-full px-5 py-4 bg-black/30 border rounded-xl text-xs md:text-sm text-white placeholder-transparent focus:outline-none transition-all duration-300 ${
+                    className={`w-full pt-6 pb-2 px-5 bg-black/30 border rounded-xl text-xs md:text-sm text-white placeholder-transparent focus:outline-none transition-all duration-300 ${
                       focusedField === "email"
                         ? "border-violet-500 shadow-[0_0_20px_rgba(139,92,246,0.15)]"
                         : "border-white/10"
@@ -164,9 +164,9 @@ export default function ContactPage() {
                   />
                   <label
                     htmlFor="email"
-                    className={`absolute left-5 top-4 text-xs md:text-sm pointer-events-none transition-all duration-300 ${
+                    className={`absolute left-5 top-4 text-xs md:text-sm pointer-events-none transition-all duration-300 origin-left ${
                       focusedField === "email" || formData.email
-                        ? "-translate-y-7 scale-90 text-violet-400"
+                        ? "-translate-y-2.5 scale-75 text-violet-400"
                         : "text-white/40"
                     }`}
                   >
@@ -235,7 +235,7 @@ export default function ContactPage() {
                     onChange={handleChange}
                     onFocus={() => handleFocus("message")}
                     onBlur={handleBlur}
-                    className={`w-full px-5 py-4 bg-black/30 border rounded-xl text-xs md:text-sm text-white placeholder-transparent focus:outline-none transition-all duration-300 resize-none ${
+                    className={`w-full pt-6 pb-2 px-5 bg-black/30 border rounded-xl text-xs md:text-sm text-white placeholder-transparent focus:outline-none transition-all duration-300 resize-none ${
                       focusedField === "message"
                         ? "border-violet-500 shadow-[0_0_20px_rgba(139,92,246,0.15)]"
                         : "border-white/10"
@@ -243,9 +243,9 @@ export default function ContactPage() {
                   />
                   <label
                     htmlFor="message"
-                    className={`absolute left-5 top-4 text-xs md:text-sm pointer-events-none transition-all duration-300 ${
+                    className={`absolute left-5 top-4 text-xs md:text-sm pointer-events-none transition-all duration-300 origin-left ${
                       focusedField === "message" || formData.message
-                        ? "-translate-y-7 scale-90 text-violet-400"
+                        ? "-translate-y-2.5 scale-75 text-violet-400"
                         : "text-white/40"
                     }`}
                   >

@@ -146,7 +146,7 @@ export default function PortfolioPage() {
               animate={{ scale: 1, y: 0, opacity: 1 }}
               exit={{ scale: 0.95, y: 30, opacity: 0 }}
               transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-              className="bg-[#18181b] border border-white/10 p-8 md:p-12 rounded-3xl w-full max-w-2xl relative shadow-[0_25px_60px_rgba(0,0,0,0.8)] overflow-hidden"
+              className="bg-[#18181b] border border-white/10 p-8 md:p-12 rounded-3xl w-full max-w-2xl relative shadow-[0_25px_60px_rgba(0,0,0,0.8)] max-h-[85vh] overflow-y-auto"
             >
               {/* Corner Close Button */}
               <button

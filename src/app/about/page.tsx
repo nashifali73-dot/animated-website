@@ -100,7 +100,7 @@ export default function AboutPage() {
             </h2>
           </div>
 
-          <div className="relative border-l border-white/10 pl-6 md:pl-10 ml-4 md:ml-8 space-y-16">
+          <div className="relative border-l border-white/10 ml-4 md:ml-8 space-y-16">
             {timelineData.map((item, index) => (
               <motion.div
                 key={item.year}
@@ -108,10 +108,10 @@ export default function AboutPage() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.8, delay: index * 0.15, ease: [0.16, 1, 0.3, 1] }}
-                className="relative"
+                className="relative pl-6 md:pl-10"
               >
-                {/* Timeline Dot */}
-                <div className="absolute -left-[31px] md:-left-[47px] top-1.5 w-4 h-4 rounded-full bg-violet-500 border-4 border-[#0e0e0e] accent-glow" />
+                {/* Timeline Dot centered on border axis */}
+                <div className="absolute left-0 -translate-x-1/2 top-1.5 w-4 h-4 rounded-full bg-violet-500 border-4 border-[#0e0e0e] accent-glow" />
                 
                 <span className="font-mono text-xs text-violet-400 font-bold block mb-2">
                   {item.year}

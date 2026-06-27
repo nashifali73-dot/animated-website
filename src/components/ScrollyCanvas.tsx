@@ -10,6 +10,7 @@ export default function ScrollyCanvas() {
   
   const frameCount = 80;
   const imagesRef = useRef<HTMLImageElement[]>([]);
+  const lastWidthRef = useRef<number>(0);
   const [loadingProgress, setLoadingProgress] = useState(0);
   const [isLoaded, setIsLoaded] = useState(false);
   const [activeFrame, setActiveFrame] = useState(0);
@@ -101,6 +102,10 @@ export default function ScrollyCanvas() {
     const handleResize = () => {
       const canvas = canvasRef.current;
       if (!canvas || imagesRef.current.length === 0) return;
+
+      // Ignore resizes that only change height (like mobile address bar toggle)
+      if (window.innerWidth === lastWidthRef.current && lastWidthRef.current !== 0) return;
+      lastWidthRef.current = window.innerWidth;
 
       const rect = canvas.getBoundingClientRect();
       const dpr = window.devicePixelRatio || 1;
